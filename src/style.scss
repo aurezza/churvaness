@@ -1,0 +1,176 @@
+// $variables
+$font-stack: Helvetica, sans-serif;
+$black: #000;
+$dark-grey: #757575;
+$grey: #cdcdcd;
+$dark-green: #04a704;
+$green: #27c73c;
+$dark-blue: #2424fd;
+$blue: #6868fd;
+$red: #c72727;
+$rose: #9e4d4d;
+$pink: #dc5a5a;
+$light-pink: rgba(226, 106, 106, 0.23921568627450981);
+$beige: #fff8be;
+$white: #fff;
+
+// %extend
+%main-section {
+    margin:0;
+    height: 100%;
+    padding: 10px 8px;
+}
+
+%green-button {
+    background: $green;
+    border: 1px solid $dark-green;
+    color: $white;
+}
+
+%blue-button {
+    background: $blue;
+    border: 1px solid $dark-blue;
+    color: $white;
+}
+
+%clear {
+    display: block;
+    height: 100px;
+}
+
+// $mixin
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    border-radius: $radius;
+}
+
+body {
+    margin: 0 ;
+    font: 100% $font-stack;
+    height: 100vh;
+    overflow: hidden;
+}
+.app {
+    position: relative;
+    width: 100%;
+    height: 600px;
+}
+
+button {
+    @include border-radius(4px);
+    margin: 8px 0 0;
+    padding: 6px 8px;
+}
+
+form {
+    width: 98%;
+    padding-right: 2%;
+}
+
+input, textarea {
+    font-family: $font-stack;
+    color: $dark-grey;
+    margin: 2px 0;
+    width: 96%;
+    padding: 1%;
+    font-size: 12px;
+}
+
+
+.navigation {
+    padding: 10px 8px;
+    background: $pink;
+    color: $white;
+}
+
+.sidebar {
+    @extend %main-section;
+    width: 20%;
+    float:left;
+    background: $light-pink;
+
+    button {
+        @extend %green-button;
+        width: 100%;
+    }
+}
+
+.task-timeline {
+    @extend %main-section;
+    width: 75%;
+    float:right;
+    overflow-y: scroll;
+
+    h1 {
+        color: $rose;
+        margin:0 3% 10px;
+        font-size: 1.1em;
+        text-transform: uppercase;
+    }
+
+    .task-card {
+        @include border-radius(4px);
+        position: relative;
+        background: $beige;
+        width:40%;
+        height: 250px;
+        display: inline-block;
+        vertical-align: top;
+        margin: 0 3% 16px;
+        padding: 10px;
+        color: $grey;
+        font-size: .8em;
+
+        p {
+            font-size: .8em;
+            margin: 0 0 10px;
+            font-style: italic;
+        }
+
+        label {
+            margin-top: 6px;
+            margin-right: 4px;
+            float: left;
+            color: $pink;
+        }
+
+        input, textarea {
+            width: auto;
+            display: inline-block;
+            background: transparent;
+            border: none;
+            border-bottom: 1px dashed;
+        }
+
+        .button-wrapper {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+        }
+
+        button {
+            background: $pink;
+            border: 1px solid $red;
+            color: $white;
+            margin-right: 4px;
+            display: inline-block;
+        }
+
+        .task-edit {
+            @extend %blue-button;
+        }
+
+        .task-save {
+            @extend %green-button;
+        }
+    
+    }
+
+    .task-adjust-last{
+        @extend %clear;
+        margin-top: 20px;
+    }
+    
+}

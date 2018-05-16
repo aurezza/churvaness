@@ -1,0 +1,113 @@
+.sidebar, .task-timeline {
+  margin: 0;
+  height: 100%;
+  padding: 10px 8px; }
+
+.sidebar button, .task-timeline .task-card .task-save {
+  background: #27c73c;
+  border: 1px solid #04a704;
+  color: #fff; }
+
+.task-timeline .task-card .task-edit {
+  background: #6868fd;
+  border: 1px solid #2424fd;
+  color: #fff; }
+
+.task-timeline .task-adjust-last {
+  display: block;
+  height: 100px; }
+
+body {
+  margin: 0;
+  font: 100% Helvetica, sans-serif;
+  height: 100vh;
+  overflow: hidden; }
+
+.app {
+  position: relative;
+  width: 100%;
+  height: 600px; }
+
+button {
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  border-radius: 4px;
+  margin: 8px 0 0;
+  padding: 6px 8px; }
+
+form {
+  width: 98%;
+  padding-right: 2%; }
+
+input, textarea {
+  font-family: Helvetica, sans-serif;
+  color: #757575;
+  margin: 2px 0;
+  width: 96%;
+  padding: 1%;
+  font-size: 12px; }
+
+.navigation {
+  padding: 10px 8px;
+  background: #dc5a5a;
+  color: #fff; }
+
+.sidebar {
+  width: 20%;
+  float: left;
+  background: rgba(226, 106, 106, 0.239216); }
+  .sidebar button {
+    width: 100%; }
+
+.task-timeline {
+  width: 75%;
+  float: right;
+  overflow-y: scroll; }
+  .task-timeline h1 {
+    color: #9e4d4d;
+    margin: 0 3% 10px;
+    font-size: 1.1em;
+    text-transform: uppercase; }
+  .task-timeline .task-card {
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    border-radius: 4px;
+    position: relative;
+    background: #fff8be;
+    width: 40%;
+    height: 250px;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 3% 16px;
+    padding: 10px;
+    color: #cdcdcd;
+    font-size: .8em; }
+    .task-timeline .task-card p {
+      font-size: .8em;
+      margin: 0 0 10px;
+      font-style: italic; }
+    .task-timeline .task-card label {
+      margin-top: 6px;
+      margin-right: 4px;
+      float: left;
+      color: #dc5a5a; }
+    .task-timeline .task-card input, .task-timeline .task-card textarea {
+      width: auto;
+      display: inline-block;
+      background: transparent;
+      border: none;
+      border-bottom: 1px dashed; }
+    .task-timeline .task-card .button-wrapper {
+      position: absolute;
+      bottom: 10px;
+      left: 10px; }
+    .task-timeline .task-card button {
+      background: #dc5a5a;
+      border: 1px solid #c72727;
+      color: #fff;
+      margin-right: 4px;
+      display: inline-block; }
+  .task-timeline .task-adjust-last {
+    margin-top: 20px; }
